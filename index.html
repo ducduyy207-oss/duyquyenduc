@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog cá nhân - Quyền Đức Duy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /* DARK MODE (mặc định) */
+    body.dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    body.dark header {
+      background: #1f1f1f;
+      border-bottom: 2px solid #333;
+    }
+    body.dark h2 {
+      color: #4da6ff;
+      border-left: 4px solid #4da6ff;
+    }
+    body.dark nav a {
+      color: #80c0ff;
+    }
+    body.dark nav a:hover {
+      color: #fff;
+    }
+    body.dark section, body.dark .intro {
+      background: #1f1f1f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    body.dark footer {
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+    }
+
+    /* LIGHT MODE */
+    body.light {
+      background: #fdfdfd;
+      color: #333;
+    }
+    body.light header {
+      background: #e6f2f7;
+      border-bottom: 2px solid #ccc;
+    }
+    body.light h2 {
+      color: #004080;
+      border-left: 4px solid #004080;
+    }
+    body.light nav a {
+      color: #004080;
+    }
+    body.light nav a:hover {
+      color: #000;
+    }
+    body.light section, body.light .intro {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    body.light footer {
+      background: #f2f2f2;
+      border-top: 1px solid #ccc;
+    }
+
+    /* Header */
+    header {
+      padding: 25px 20px 15px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    /* Nút toggle */
+    #toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4da6ff;
+      color: #fff;
+      transition: 0.3s;
+    }
+    #toggle-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Giới thiệu */
+    .intro {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .intro img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Section */
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    ul {
+      list-style: square;
+      margin-left: 25px;
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Bài viết */
+    .post {
+      margin-bottom: 20px;
+    }
+    .post h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+    .post p {
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body class="dark">
+  <header>
+    <h1>Xin chào, tôi là Quyền Đức Duy</h1>
+    <button id="toggle-btn">Chuyển sang Light Mode</button>
+    <nav>
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#so-thich">Sở thích</a>
+      <a href="#truong-hoc">Ngôi trường</a>
+      <a href="#ky-nang">Kỹ năng</a>
+      <a href="#bai-viet">Bài viết</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Giới thiệu -->
+    <section id="gioi-thieu" class="intro">
+      <img src="ducduy.jpeg" alt="Ảnh đại diện">
+      <p>
+        Tôi là sinh viên CNTT yêu thích <b>web</b> và <b>UI/UX</b>.<br>
+        Blog này ghi lại quá trình học tập và những điều tôi khám phá mỗi ngày.
+      </p>
+    </section>
+
+    <!-- Sở thích -->
+    <section id="so-thich">
+      <h2>Sở thích</h2>
+      <ul>
+        <li>Lập trình web và thiết kế giao diện</li>
+        <li>Chơi game</li>
+        <li>Nghe nhạc, xem phim</li>
+        <li>Du lịch và khám phá ẩm thực</li>
+      </ul>
+    </section>
+
+    <!-- Trường học -->
+    <section id="truong-hoc">
+      <h2>Ngôi trường của tôi</h2>
+      <p>
+        Hiện tại tôi đang học tập tại <b>Trường Đại học Đại Nam</b> – một môi trường năng động, sáng tạo và khuyến khích sinh viên phát triển kỹ năng thực hành.<br><br>
+        Ở đây, tôi được tham gia nhiều hoạt động ngoại khóa, các CLB học thuật và có cơ hội giao lưu cùng bạn bè trên cả nước.
+      </p>
+    </section>
+
+    <!-- Kỹ năng -->
+    <section id="ky-nang">
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>HTML &amp; CSS cơ bản</li>
+        <li>JavaScript và React</li>
+        <li>Git/GitHub</li>
+        <li>UI/UX cơ bản</li>
+        <li>Viết blog học tập</li>
+      </ul>
+    </section>
+
+    <!-- Bài viết -->
+    <section id="bai-viet">
+      <h2>Bài viết gần đây</h2>
+      <div class="post">
+        <h3>Làm quen với HTML</h3>
+        <p>Mình vừa học về các thẻ cơ bản như <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code> và cách chèn CSS đơn giản.</p>
+      </div>
+      <div class="post">
+        <h3>CSS: Màu sắc và khoảng cách</h3>
+        <p>Tập chỉnh màu chữ, cỡ chữ, <code>margin</code>, <code>padding</code> để bố cục gọn gàng hơn.</p>
+      </div>
+      <div class="post">
+        <h3>JavaScript: Làm quen với sự kiện</h3>
+        <p>Bắt đầu tìm hiểu cách xử lý sự kiện như click, hover để website trở nên sống động hơn.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 · Viết bằng HTML/CSS cơ bản · 
+    <a href="http://dainam.edu.vn" target="_blank">http://dainam.edu.vn</a>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+
+      if (body.classList.contains("dark")) {
+        toggleBtn.textContent = "Chuyển sang Light Mode";
+      } else {
+        toggleBtn.textContent = "Chuyển sang Dark Mode";
+      }
+    });
+  </script>
+</body>
+</html>
